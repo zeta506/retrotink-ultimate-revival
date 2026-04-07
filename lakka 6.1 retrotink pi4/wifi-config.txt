@@ -1,0 +1,4 @@
+# Wi-Fi configuration for Lakka
+SSID=########
+PSK=########
+COUNTRY=US

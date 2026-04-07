@@ -1,0 +1,37 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
+# Copyright (C) 2009-2014 Stephan Raue (stephan@openelec.tv)
+# Copyright (C) 2016-present Team LibreELEC (https://libreelec.tv)
+################################################################################
+# Bootloader configuration - RetroTINK Ultimate (DPI 240p) - Pi 5 aarch64
+# config.txt version v1 (do not remove or change this line!)
+################################################################################
+
+gpu_mem=128
+
+hdmi_ignore_cec_init=1
+
+[all]
+include distroconfig.txt
+
+################################################################################
+# DPI via KMS - usando el overlay nativo vc4-kms-dpi-generic
+# Pi 5 usa chip RP1 para DPI, soporta interlazado nativo
+################################################################################
+dtoverlay=vc4-kms-dpi-generic
+dtparam=rgb888
+dtparam=clock-frequency=52000000
+dtparam=hactive=2048,hfp=180,hsync=202,hbp=300
+dtparam=vactive=240,vfp=3,vsync=5,vbp=14
+dtparam=hsync-invert,vsync-invert
+
+# Desactivar HDMI para forzar que todo salga por DPI
+hdmi_force_hotplug=0
+
+################################################################################
+# General
+################################################################################
+disable_splash=1
+dtparam=audio=on
+audio_pwm_mode=1
+hdmi_drive=1
+force_turbo=0

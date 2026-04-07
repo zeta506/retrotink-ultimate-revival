@@ -1,0 +1,59 @@
+# Add overrides for RetroArch default configuration in
+# following form:
+#
+# key_name = "value"
+# other_key = 42
+#
+# These will be then added to / replace existing ones in
+# default retroarch.cfg
+#
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# !!!  Overrides / settings from this file are used  !!!
+# !!! only during the very first boot after flashing !!!
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+# RGUI es el unico menu legible a 240p
+menu_driver = "rgui"
+rgui_aspect_ratio_lock = "3"
+menu_scale_factor = "1.0"
+
+# Notificaciones: widgets OFF, texto OSD con fuente Vienna Heavy (ancha)
+menu_widget_scale_auto = "false"
+menu_widgets_enable = "false"
+menu_enable_widgets = "false"
+video_font_enable = "true"
+video_font_path = "/storage/fonts/SuperResolucion.ttf"
+video_font_size = "14"
+video_msg_bgcolor_enable = "true"
+
+# Video - CRT optimizado
+video_fullscreen = "true"
+video_smooth = "false"
+video_vsync = "true"
+video_scale_integer = "true"
+video_threaded = "true"
+video_frame_delay = "4"
+
+# Forzar aspect ratio 4:3 - el RetroTINK se encarga del resto
+aspect_ratio_index = "0"
+video_aspect_ratio_auto = "false"
+custom_viewport_width = "1280"
+custom_viewport_height = "240"
+custom_viewport_x = "384"
+custom_viewport_y = "0"
+
+# Audio - forzar salida por jack 3.5mm
+audio_driver = "alsa"
+audio_device = "hw:1,0"
+
+# Input - Home (B12) abre el menu de RetroArch
+input_menu_toggle_btn = "12"
+
+# Rendimiento Pi 3
+rewind_enable = "false"
+
+# Calidad de vida
+savestate_auto_save = "false"
+savestate_auto_load = "false"
+menu_pause_libretro = "true"
+quit_press_twice = "true"

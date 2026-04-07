@@ -1,0 +1,70 @@
+# Add overrides for RetroArch default configuration in
+# following form:
+#
+# key_name = "value"
+# other_key = 42
+#
+# These will be then added to / replace existing ones in
+# default retroarch.cfg
+#
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# !!!  Overrides / settings from this file are used  !!!
+# !!! only during the very first boot after flashing !!!
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+# RGUI es el unico menu legible a 240p
+menu_driver = "rgui"
+rgui_aspect_ratio_lock = "3"
+menu_scale_factor = "1.0"
+
+# Notificaciones: widgets OFF, fuente default (no requiere setup.sh)
+menu_widget_scale_auto = "false"
+menu_widgets_enable = "false"
+menu_enable_widgets = "false"
+video_font_enable = "true"
+video_font_size = "14"
+video_msg_bgcolor_enable = "true"
+
+# Video - CRT optimizado
+video_fullscreen = "true"
+video_smooth = "false"
+video_vsync = "true"
+video_scale_integer = "true"
+video_threaded = "true"
+video_frame_delay = "4"
+
+# CRT Switch Resolution - super 2560 (integer scaling para todo)
+crt_switch_resolution = "1"
+crt_switch_resolution_super = "2048"
+crt_switch_center_adjust = "0"
+crt_switch_porch_adjust = "0"
+
+# Forzar aspect ratio 4:3 con custom viewport para 2048 ancho (modo boot)
+# Area 4:3 = 240 * (16/3) = 1280px, offset = (2048-1280)/2 = 384
+# SwitchRes recalcula al cambiar a 2560 en juego
+aspect_ratio_index = "0"
+video_aspect_ratio_auto = "false"
+custom_viewport_width = "1280"
+custom_viewport_height = "240"
+custom_viewport_x = "384"
+custom_viewport_y = "0"
+
+# Audio - DAC USB C-Media (Pi 5 no tiene jack 3.5mm)
+audio_driver = "alsa"
+audio_device = "hw:2,0"
+
+# Input - Home (B12) abre el menu de RetroArch
+input_menu_toggle_btn = "12"
+
+# Rendimiento Pi 5
+rewind_enable = "false"
+
+# Logging para debug
+log_verbosity = "true"
+log_to_file = "true"
+
+# Calidad de vida
+savestate_auto_save = "false"
+savestate_auto_load = "false"
+menu_pause_libretro = "true"
+quit_press_twice = "true"
