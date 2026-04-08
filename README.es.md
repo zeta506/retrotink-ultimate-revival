@@ -1,3 +1,8 @@
+
+
+[![Ver video](https://img.youtube.com/vi/GCK6InNT9x4/0.jpg)](https://www.youtube.com/watch?v=GCK6InNT9x4)
+
+
 # RetroTINK Ultimate + Lakka
 
 [Read in English](README.md)
